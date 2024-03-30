@@ -6,8 +6,8 @@ services:
       dockerfile: dockerfile.flask
     image: flask_img
     container_name: mushroom_classification_proj
-    ports:
-      - "3000:3000"
+    #ports:
+     # - "3000:3000"
     
   mlflow_app:
     build:
@@ -15,6 +15,6 @@ services:
       dockerfile: dockerfile.mlflow
     image: mlflow_img
     container_name: mush_classif_models_compare
-    ports:
-      - "5000:5000"
+#    ports:
+ #     - "5000:5000"
     
