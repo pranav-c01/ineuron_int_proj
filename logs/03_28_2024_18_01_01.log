@@ -1,0 +1,12 @@
+[2024-03-28 18:01:01,977] 32 root - INFO - Model train and evaluate phase started
+[2024-03-28 18:01:02,000] 55 root - INFO - Train and test data fetch successfully completed for train and evaluate phase
+[2024-03-28 18:01:02,019] 66 root - INFO - MLflow experiment run started.. 
+[2024-03-28 18:01:06,497] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxmtvyyaf\model\conda.yaml -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:06,502] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxmtvyyaf\model\MLmodel -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:06,507] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxmtvyyaf\model\model.pkl -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:06,507] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxmtvyyaf\model\requirements.txt -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:09,199] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpsk41x0gm\model\conda.yaml -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:09,212] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpsk41x0gm\model\MLmodel -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:09,215] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpsk41x0gm\model\model.pkl -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:09,215] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpsk41x0gm\model\requirements.txt -> mysql\1\601ff573fc03455ca754e786674f6c36\artifacts\model
+[2024-03-28 18:01:09,266] 101 root - INFO - Exception occured in the train and evaluate model phase -> (Model Registry features are not supported by the store with URI: 'mysql'. Stores with the following URI schemes are supported: ['databricks', 'http', 'https', 'postgresql', 'mysql', 'sqlite', 'mssql'].)

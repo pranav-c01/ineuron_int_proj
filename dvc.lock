@@ -1,0 +1,98 @@
+schema: '2.0'
+stages:
+  get_DB_data:
+    cmd: python src/components/data_fetch_astra_db.py --config=params.yaml
+    deps:
+    - path: src/components/data_fetch_astra_db.py
+      md5: d99da28569390728e351acebc6cf8cdf
+      size: 7354
+    outs:
+    - path: data_given/mushrooms.csv
+      md5: 7381e7944f2be99503065c97b9ea0bf1
+      size: 382129
+  load_data:
+    cmd: python src/components/data_load_and_save.py --config=params.yaml
+    deps:
+    - path: data_given/mushrooms.csv
+      md5: 7381e7944f2be99503065c97b9ea0bf1
+      size: 382129
+    - path: src/components/data_fetch_astra_db.py
+      md5: d99da28569390728e351acebc6cf8cdf
+      size: 7354
+    - path: src/components/data_load_and_save.py
+      md5: bea3bd2cf2f0aae7dd44e609b6886200
+      size: 1519
+    outs:
+    - path: data/raw/mushrooms.csv
+      md5: bae7421142763304f6f055f312a177b3
+      size: 382129
+  preprocessing:
+    cmd: python src/components/data_transformation.py --config=params.yaml
+    deps:
+    - path: data/raw/mushrooms.csv
+      md5: bae7421142763304f6f055f312a177b3
+      size: 382129
+    - path: src/components/data_load_and_save.py
+      md5: bea3bd2cf2f0aae7dd44e609b6886200
+      size: 1519
+    - path: src/components/data_transformation.py
+      md5: f3efbb9c32bf14a9c6800f92e458d90b
+      size: 2748
+    outs:
+    - path: data/processed/processed_final.csv
+      md5: b900531745df83b8d94be215c73b2013
+      size: 594580
+    - path: saved_models/F_selector.joblib
+      md5: 1a3cbdb5b4c0747ac7dd5d530a0a0d46
+      size: 644
+    - path: saved_models/ord_enc.joblib
+      md5: 0f3d3f6a932cb6836e19888be270a888
+      size: 6700
+  split_data:
+    cmd: python src/components/split_data.py --config=params.yaml
+    deps:
+    - path: data/processed/processed_final.csv
+      md5: b900531745df83b8d94be215c73b2013
+      size: 594580
+    - path: src/components/data_transformation.py
+      md5: f3efbb9c32bf14a9c6800f92e458d90b
+      size: 2748
+    - path: src/components/split_data.py
+      md5: 708b6f7c00fd85970fe16c064803bf9e
+      size: 1922
+    outs:
+    - path: data/processed/test_mushrooms.csv
+      md5: 8d9d1aacdd4c1eec97bfc9e5fbe69f5f
+      size: 119123
+    - path: data/processed/train_mushrooms.csv
+      md5: c1e1ff6f69b7f25f62535bd0fca71b78
+      size: 475697
+  train_and_evaluate:
+    cmd: python src/components/train_and_evaluate.py --config=params.yaml
+    deps:
+    - path: data/processed/test_mushrooms.csv
+      md5: 8d9d1aacdd4c1eec97bfc9e5fbe69f5f
+      size: 119123
+    - path: data/processed/train_mushrooms.csv
+      md5: c1e1ff6f69b7f25f62535bd0fca71b78
+      size: 475697
+    - path: src/components/split_data.py
+      md5: 708b6f7c00fd85970fe16c064803bf9e
+      size: 1922
+    - path: src/components/train_and_evaluate.py
+      md5: d1fbbccd09a46cde591ca18bc944c902
+      size: 4001
+    params:
+      params.yaml:
+        estimators.Adaboost.params.algorithm: SAMME
+        estimators.Adaboost.params.learning_rate: 0.1
+        estimators.Adaboost.params.n_estimators: 100
+  log_production_model:
+    cmd: python src/components/log_production_model.py --config=params.yaml
+    deps:
+    - path: src/components/log_production_model.py
+      md5: 991fa659fb99ee92a2053c5cf597e6ff
+      size: 3064
+    - path: src/components/train_and_evaluate.py
+      md5: d1fbbccd09a46cde591ca18bc944c902
+      size: 4001

@@ -1,0 +1,20 @@
+version: "3"
+services:
+  flaskapp:
+    build:
+      context: ./
+      dockerfile: dockerfile.flask
+    image: flask_img
+    container_name: mushroom_classification_proj
+    ports:
+      - "3000:3000"
+    
+  mlflow_app:
+    build:
+      context: ./
+      dockerfile: dockerfile.mlflow
+    image: mlflow_img
+    container_name: mush_classif_models_compare
+    ports:
+      - "5000:5000"
+    

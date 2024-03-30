@@ -1,0 +1,56 @@
+stages:
+  get_DB_data:
+    cmd: python src/components/data_fetch_astra_db.py --config=params.yaml
+    deps:
+    - src/components/data_fetch_astra_db.py
+    outs:
+    - data_given/mushrooms.csv
+
+  load_data:
+    cmd: python src/components/data_load_and_save.py --config=params.yaml
+    deps:
+    - src/components/data_fetch_astra_db.py
+    - src/components/data_load_and_save.py
+    - data_given/mushrooms.csv
+    outs:
+    - data/raw/mushrooms.csv
+
+  preprocessing:
+    cmd: python src/components/data_transformation.py --config=params.yaml
+    deps:
+    - src/components/data_load_and_save.py
+    - src/components/data_transformation.py
+    - data/raw/mushrooms.csv
+    outs: 
+    - data/processed/processed_final.csv
+    - saved_models/ord_enc.joblib
+    - saved_models/F_selector.joblib
+
+  split_data:
+    cmd: python src/components/split_data.py --config=params.yaml
+    deps:
+    - src/components/data_transformation.py
+    - src/components/split_data.py
+    - data/processed/processed_final.csv
+    outs:
+    - data/processed/train_mushrooms.csv
+    - data/processed/test_mushrooms.csv
+
+  train_and_evaluate:
+    cmd: python src/components/train_and_evaluate.py --config=params.yaml
+    deps:
+    - src/components/split_data.py
+    - data/processed/train_mushrooms.csv
+    - data/processed/test_mushrooms.csv
+    - src/components/train_and_evaluate.py
+    params:
+    - estimators.Adaboost.params.n_estimators
+    - estimators.Adaboost.params.learning_rate
+    - estimators.Adaboost.params.algorithm
+
+
+  log_production_model:
+    cmd: python src/components/log_production_model.py --config=params.yaml
+    deps:
+    - src/components/train_and_evaluate.py
+    - src/components/log_production_model.py

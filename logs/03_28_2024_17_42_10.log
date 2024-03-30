@@ -1,0 +1,13 @@
+[2024-03-28 17:42:10,698] 32 root - INFO - Model train and evaluate phase started
+[2024-03-28 17:42:10,708] 55 root - INFO - Train and test data fetch successfully completed for train and evaluate phase
+[2024-03-28 17:42:10,747] 65 root - INFO - MLflow experiment run started.. 
+[2024-03-28 17:42:14,301] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpm_kec4ao\model\conda.yaml -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:14,309] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpm_kec4ao\model\MLmodel -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:14,316] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpm_kec4ao\model\model.pkl -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:14,316] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpm_kec4ao\model\requirements.txt -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:16,928] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxim3mwts\model\conda.yaml -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:16,937] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxim3mwts\model\MLmodel -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:16,940] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxim3mwts\model\model.pkl -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:16,940] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpxim3mwts\model\requirements.txt -> C:\Users\World of wonders\Desktop\ineuron_internship\Final_ineuron_internship_proj\mlruns\1\7fdf4a8f0a23468e8d7cb041181867de\artifacts\model
+[2024-03-28 17:42:16,955] 95 root - INFO - MLflow experiment Successfully completed .. 
+[2024-03-28 17:42:16,955] 96 root - INFO - Model train and evaluate phase ended successfully ... 

@@ -1,0 +1,50 @@
+base:
+  project: Mushroom-classififcation-project
+  random_state: 42
+  target_col: class
+
+#data_source:
+#  s3_source: data_given/mushrooms.csv
+
+load_data:
+  raw_dataset_csv: data/raw/mushrooms.csv
+
+split_data:
+  preprocessed_data_path: data/processed/processed_final.csv
+  train_path: data/processed/train_mushrooms.csv
+  test_path: data/processed/test_mushrooms.csv
+  test_size: 0.2
+
+estimators:
+  Adaboost:
+    params:
+#      n_estimators: 50
+#      learning_rate: 1
+#      algorithm: SAMME
+      n_estimators: 100
+      learning_rate: 0.1
+      algorithm: SAMME
+
+model_dir: saved_models
+
+ord_encoder_path: saved_models/ord_enc.joblib
+Feature_selector_path: saved_models/F_selector.joblib
+
+reports:
+  params: report/params.json
+  scores: report/scores.json
+
+webapp_model_dir: prediction_service/model/model.joblib
+
+astra_db_cred:
+  token: AstraCS:doLWOnBYpANgEvMJbCNNzmhj:28885e470a8b7be5b71dda095813d532fb632ebbadd2a5f516d923923a976b43
+  database_name: Main_db
+  raw_data_path: data_given/mushrooms.csv
+  passwd: Astradb1234
+
+mlflow_config:
+  artifacts_dir: artifacts_mush
+  experiment_name: Mushroom_Classfication
+  run_name: mlops_run_i
+  registered_model_name: mush_class_model
+  remote_server_uri: http://127.0.0.1:5000

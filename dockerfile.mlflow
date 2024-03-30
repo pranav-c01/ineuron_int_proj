@@ -1,0 +1,13 @@
+FROM python:3.8-slim-buster
+WORKDIR /app
+COPY . /app
+
+RUN apt update -y 
+RUN pip install -r requirements.txt
+
+# Set MLflow backend store URI and default artifact root
+ENV MLFLOW_BACKEND_STORE_URI sqlite:///mlflow.db
+ENV MLFLOW_DEFAULT_ARTIFACT_ROOT artifacts
+
+# Start MLflow server
+CMD ["mlflow", "server", "--backend-store-uri", "sqlite:///mlflow.db", "--default-artifact-root", "artifacts", "--host", "0.0.0.0", "--port", "5000"]

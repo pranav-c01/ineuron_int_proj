@@ -1,0 +1,33 @@
+# local package install
+-e .
+
+# third party packages
+dvc==2.6.0
+urllib3==1.25.11
+scikit-learn==0.23.2
+pandas==1.3.3
+pytest==6.2.5
+tox==3.23.1
+flake8==3.9.2
+flask==1.1.4
+gunicorn==20.1.0
+PyYAML==5.4.1
+mlflow==1.20.2
+apache-airflow==1.10.14
+cattrs==1.0.0
+astrapy==0.7.7
+numpy==1.21.4
+fsspec==2021.10.0
+markupsafe==2.0.1
+protobuf==3.20.0	
+#attrs==20.3.0
+#dvc-data==2.16.4
+
+#pip install fsspec==2021.10.0
+#pip install numpy==1.21.4
+#pip install markupsafe==2.0.1
+
+#Initially venv installations
+#pip        23.3.1
+#setuptools 68.2.2
+#wheel      0.41.2

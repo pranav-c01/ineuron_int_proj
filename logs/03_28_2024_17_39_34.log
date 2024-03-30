@@ -1,0 +1,13 @@
+[2024-03-28 17:39:34,849] 32 root - INFO - Model train and evaluate phase started
+[2024-03-28 17:39:34,870] 55 root - INFO - Train and test data fetch successfully completed for train and evaluate phase
+[2024-03-28 17:39:34,919] 65 root - INFO - MLflow experiment run started.. 
+[2024-03-28 17:39:44,083] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpmqjek5ey\model\conda.yaml -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:44,092] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpmqjek5ey\model\MLmodel -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:44,130] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpmqjek5ey\model\model.pkl -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:44,130] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpmqjek5ey\model\requirements.txt -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:47,231] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpd9dnt37p\model\conda.yaml -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:47,236] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpd9dnt37p\model\MLmodel -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:47,239] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpd9dnt37p\model\model.pkl -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:47,239] 137 root - INFO - copying C:\Users\WORLDO~1\AppData\Local\Temp\tmpd9dnt37p\model\requirements.txt -> .\artifacts\1\4cca72cf30294785afe4a39d69fb0278\artifacts\model
+[2024-03-28 17:39:49,501] 95 root - INFO - MLflow experiment Successfully completed .. 
+[2024-03-28 17:39:49,501] 96 root - INFO - Model train and evaluate phase ended successfully ... 
